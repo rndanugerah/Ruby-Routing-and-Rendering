@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  
+<style>
+body{
+	background: radial-gradient(circle at top left, #22c1c3, #fdbb2d);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.container{
+  padding:50px;
+}
+  
+.message {
+  padding: 15px 40px;
+  background-color: #5dca88;
+  cursor: pointer;
+  box-shadow: 0 7px #1a7940;
+}
+
+.message:active{
+  box-shadow:none;
+  top:7px;
+  position:relative;
+}
+
+h1{
+  text-align:center;
+  margin-top: 15%;
+}
+
+.btn {
+  padding: 12px 24px;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.form-wrapper {
+  text-align: center;
+  width: 50%;
+  margin-top:50%;
+  margin:0 auto;
+}
+
+input{
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px solid black;
+  margin-bottom: 15px;
+  margin-top:5px;
+}  
+</style>
+  
+  <body>
+    <h1>Form Login</h1>
+    <div class = "container">
+    <div class="form-wrapper">
+      <form name="mylogin" action="/" method="POST">
+      <label for="username"> Username:</label><br>
+      <input type="text" id="username" name="username"><br>
+    
+      <label for="password"> Password:</label><br>
+      <input type="password" id="password" name="password"><br>
+    
+      <br><span class="btn message" type="submit" aria-hidden="true"onclick="mylogin.submit()">Log In</span>
+    </form>
+    </div>
+   </div>
+  </body>
+</html>

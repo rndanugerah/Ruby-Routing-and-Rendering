@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  
+<style>
+body{
+	background: radial-gradient(circle at top left, #22c1c3, #fdbb2d);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.container{
+  padding:50px;
+}
+  
+.message {
+  padding: 15px 40px;
+  background-color: #5dca88;
+  cursor: pointer;
+  box-shadow: 0 7px #1a7940;
+}
+
+.message:active{
+  box-shadow:none;
+  top:7px;
+  position:relative;
+}
+
+h1{
+  text-align:center;
+  margin-top: 15%;
+}
+
+.btn {
+  padding: 12px 24px;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.form-wrapper {
+  text-align: center;
+  width: 50%;
+  margin-top:50%;
+  margin:0 auto;
+}
+
+input{
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-top:5px;
+}    
+</style>
+
+
+<body>
+    <h1>Form Items</h1>
+    <div class= "container">
+      <div class="form-wrapper">
+        
+        <form name=myform action="/food" method="POST">
+          <label for="Name"> Name:</label><br>
+          <input type="text" id="name" name="name"><br>
+          
+          <label for="category"> Category:</label><br>
+          <input list="category" name="category" id="category">
+          <datalist id="category">
+            <option value="Food">
+            <option value="Drink">
+          </datalist><br>
+          
+          <label for="price"> Price:</label><br>
+          <input type="number" id="price" name="price" min="10000" max="50000"><br>
+          
+          <br><span class="btn message" type="submit" aria-hidden="true"onclick="myform.submit()">Submit</span>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

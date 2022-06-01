@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  
+<style>
+body{
+	background: radial-gradient(circle at top left, #fdbb2d, #22c1c3);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.container{
+  padding:50px;
+}
+
+h1{
+  text-align:center;
+  margin-top: 15%;
+}
+
+.table{
+  margin:0 auto;
+  width: 50%;
+  text-align: center;
+  border-radius: .5rem;
+}
+  
+table, th {
+  border: 3px solid black;
+  background-color:white;
+}
+
+th {
+  height: 50px;
+  vertical-align: center;
+}
+</style>
+  
+<body>
+<h1>Result Food</h1>
+<div class = "container">
+  <table class = "table">
+    <tr>
+      <th>Item Name</th>
+      <th> <%= @name %> </th>
+    </tr>
+    
+    <tr>
+      <th>Category</th>
+      <th> <%= @category%> </th>
+    </tr>
+    
+    <tr>
+      <th>Price</th>
+      <th> Rp<%= @price %> </th>
+    </tr>
+  </table>
+</div>
+  
+</body>
+</html>
